@@ -15,6 +15,10 @@ const artistSchema = new mongoose.Schema({
   genre: {
     type: [ String ], // an array of strings
     enum: [ "rock", "alternative", "jazz", "pop", "indie", "punk" ]
+  },
+  favArtist: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Artist"
   }
 })
 
